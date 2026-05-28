@@ -6,221 +6,296 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
         }
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #1d2671, #c33764);
-            color: white;
-            min-height: 100vh;
+        body{
+            font-family:'Segoe UI',sans-serif;
+            background:linear-gradient(135deg,#1d2671,#c33764);
+            color:white;
+            min-height:100vh;
         }
 
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 40px;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(12px);
+        nav{
+            position:fixed;
+            top:0;
+            width:100%;
+            z-index:100;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:20px 40px;
+            background:rgba(255,255,255,0.1);
+            backdrop-filter:blur(12px);
         }
 
-        nav h1 {
-            font-size: 1.4rem;
+        nav h1{
+            font-size:1.4rem;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
+        nav ul{
+            list-style:none;
+            display:flex;
+            gap:25px;
+            flex-wrap:wrap;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-weight:500;
+            transition:0.3s;
         }
 
-        nav a:hover {
-            color: #ffd700;
+        nav a:hover{
+            color:#ffd700;
         }
 
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
+        header{
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
         }
 
-        header h2 {
-            font-size: 3.5rem;
-            animation: fadeIn 1.5s ease;
+        header h2{
+            font-size:3.5rem;
+            animation:fadeIn 1.5s ease;
         }
 
-        header p {
-            margin-top: 20px;
-            font-size: 1.3rem;
-            max-width: 700px;
-            animation: slideUp 1.5s ease;
-            font-style: italic;
+        header p{
+            margin-top:20px;
+            font-size:1.3rem;
+            max-width:700px;
+            font-style:italic;
+            animation:slideUp 1.5s ease;
         }
 
-        section {
-            max-width: 900px;
-            margin: 120px auto;
-            background: rgba(255,255,255,0.15);
-            padding: 40px;
-            border-radius: 25px;
-            backdrop-filter: blur(14px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-            opacity: 0;
-            transform: translateY(40px);
-            transition: 1s;
+        section{
+            max-width:900px;
+            margin:120px auto;
+            background:rgba(255,255,255,0.15);
+            padding:40px;
+            border-radius:25px;
+            backdrop-filter:blur(14px);
+            box-shadow:0 15px 40px rgba(0,0,0,0.3);
+            opacity:0;
+            transform:translateY(40px);
+            transition:1s;
         }
 
-        section.show {
-            opacity: 1;
-            transform: translateY(0);
+        section.show{
+            opacity:1;
+            transform:translateY(0);
         }
 
-        section h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
+        section h3{
+            font-size:2rem;
+            margin-bottom:15px;
         }
 
-        section p, section li {
-            font-size: 1.1rem;
-            line-height: 1.7;
+        section p,
+        section li{
+            font-size:1.1rem;
+            line-height:1.7;
         }
 
-        section ul {
-            margin-top: 15px;
-            margin-left: 20px;
+        section ul{
+            margin-top:15px;
+            margin-left:20px;
         }
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 14px 26px;
-            background: linear-gradient(135deg, #ffd700, #ff9f00);
-            color: #1d2671;
-            font-weight: bold;
-            border-radius: 30px;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:14px 26px;
+            background:linear-gradient(135deg,#ffd700,#ff9f00);
+            color:#1d2671;
+            font-weight:bold;
+            border-radius:30px;
+            text-decoration:none;
+            transition:0.3s;
         }
 
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        .btn:hover{
+            transform:scale(1.05);
+            box-shadow:0 10px 25px rgba(0,0,0,0.3);
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+        .gallery{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+            margin-top:30px;
         }
 
-        .gallery img {
-            width: 100%;
-            border-radius: 20px;
-            object-fit: cover;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
+        .gallery div{
+            text-align:center;
         }
 
-        .gallery img:hover {
-            transform: scale(1.03);
+        .gallery img{
+            width:100%;
+            border-radius:20px;
+            object-fit:cover;
+            box-shadow:0 10px 25px rgba(0,0,0,0.3);
+            transition:transform 0.3s ease;
         }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            opacity: 0.8;
+        .gallery img:hover{
+            transform:scale(1.03);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .gallery p{
+            margin-top:10px;
+            font-size:1rem;
         }
 
-        @keyframes slideUp {
-            from { transform: translateY(40px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        footer{
+            text-align:center;
+            padding:30px;
+            opacity:0.8;
         }
 
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 10px;
+        @keyframes fadeIn{
+            from{opacity:0;}
+            to{opacity:1;}
+        }
+
+        @keyframes slideUp{
+            from{
+                transform:translateY(40px);
+                opacity:0;
+            }
+            to{
+                transform:translateY(0);
+                opacity:1;
+            }
+        }
+
+        @media(max-width:768px){
+
+            nav{
+                flex-direction:column;
+                gap:10px;
             }
 
-            header h2 {
-                font-size: 2.5rem;
+            header h2{
+                font-size:2.5rem;
             }
 
-            section {
-                margin: 100px 20px;
+            section{
+                margin:100px 20px;
             }
         }
     </style>
 </head>
+
 <body>
 
 <nav>
+
     <h1>Samuel Cirillo</h1>
+
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#scuola">Scuola</a></li>
         <li><a href="#attivita">Attività</a></li>
+        <li><a href="#pcto">PCTO</a></li>
         <li><a href="#grecia">Viaggio</a></li>
         <li><a href="#civica">Educazione Civica</a></li>
         <li><a href="#futuro">Futuro</a></li>
     </ul>
+
 </nav>
 
 <header id="home">
+
     <h2>Samuel Cirillo</h2>
+
     <p>
         “La curiosità, la determinazione e la voglia di migliorarmi
         guidano ogni mio obiettivo.”
     </p>
+
 </header>
 
 <section id="scuola">
+
     <h3>🎓 Percorso scolastico</h3>
+
     <p>
         Mi chiamo <strong>Samuel Cirillo</strong> e ho frequentato per
-        <strong>5 anni Scienze Applicate</strong>, sviluppando competenze
-        scientifiche e tecnologiche.
+        <strong>5 anni Scienze Applicate</strong>,
+        sviluppando competenze scientifiche e tecnologiche.
     </p>
+
 </section>
 
 <section id="attivita">
+
     <h3>🧠 Attività ed esperienze</h3>
+
     <ul>
         <li>🖨️ Stampa 3D</li>
         <li>🥽 Realtà virtuale e tecnologie immersive</li>
         <li>🏐 Torneo di pallavolo</li>
         <li>⚽ Torneo di calcio</li>
     </ul>
+
+</section>
+
+<section id="pcto">
+
+    <h3>💼 PCTO</h3>
+
+    <p>
+        Durante il percorso PCTO ho partecipato ad attività formative
+        ed esperienze pratiche che mi hanno aiutato a sviluppare
+        competenze personali e professionali.
+    </p>
+
+    <div class="gallery">
+
+        <div>
+            <img src="foto pcto 1.jpeg" alt="Foto PCTO 1">
+            <p>Foto PCTO 1</p>
+        </div>
+
+        <div>
+            <img src="foto pcto 2.jpeg" alt="Foto PCTO 2">
+            <p>Foto PCTO 2</p>
+        </div>
+
+        <div>
+            <img src="foto pcto 3.jpeg" alt="Foto PCTO 3">
+            <p>Foto PCTO 3</p>
+        </div>
+
+        <div>
+            <img src="foto pcto 4.jpeg" alt="Foto PCTO 4">
+            <p>Foto PCTO 4</p>
+        </div>
+
+        <div>
+            <img src="foto pcto 5.jpeg" alt="Foto PCTO 5">
+            <p>Foto PCTO 5</p>
+        </div>
+
+    </div>
+
 </section>
 
 <section id="grecia">
+
     <h3>🇬🇷 Viaggio d'istruzione in Grecia</h3>
+
     <p>
         Durante il viaggio d'istruzione in Grecia ho avuto l'opportunità
         di visitare luoghi storici e vivere un'esperienza culturale unica
@@ -228,30 +303,48 @@
     </p>
 
     <div class="gallery">
-        <img src="grecia1.jpeg" alt="Viaggio in Grecia 1">
-        <img src="grecia2.jpeg" alt="Viaggio in Grecia 2">
+
+        <div>
+            <img src="grecia1.jpeg" alt="Grecia 1">
+            <p>Grecia 1</p>
+        </div>
+
+        <div>
+            <img src="grecia2.jpeg" alt="Grecia 2">
+            <p>Grecia 2</p>
+        </div>
+
     </div>
+
 </section>
 
 <section id="civica">
+
     <h3>🏛️ Educazione Civica</h3>
+
     <p>
         Qui puoi visualizzare o scaricare il mio PowerPoint di
-        <strong>Educazione Civica</strong>, realizzato durante il percorso scolastico.
+        <strong>Educazione Civica</strong>,
+        realizzato durante il percorso scolastico.
     </p>
 
     <a class="btn" href="educazione-civica.pdf" target="_blank">
         📊 Apri il PowerPoint
     </a>
+
 </section>
 
 <section id="futuro">
+
     <h3>🎯 Obiettivi futuri</h3>
+
     <p>
         In futuro vorrei intraprendere un percorso di studi in
-        <strong>dietistica</strong>, unendo la passione per la scienza
+        <strong>dietistica</strong>,
+        unendo la passione per la scienza
         al benessere delle persone.
     </p>
+
 </section>
 
 <footer>
@@ -259,17 +352,23 @@
 </footer>
 
 <script>
+
     const sections = document.querySelectorAll("section");
 
     const observer = new IntersectionObserver(entries => {
+
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+
+            if(entry.isIntersecting){
                 entry.target.classList.add("show");
             }
+
         });
-    }, { threshold: 0.2 });
+
+    }, { threshold:0.2 });
 
     sections.forEach(section => observer.observe(section));
+
 </script>
 
 </body>
