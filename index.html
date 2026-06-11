@@ -299,6 +299,7 @@
         Mi chiamo <strong>Samuel Cirillo</strong> e ho frequentato per <strong>5 anni Scienze Applicate</strong>, sviluppando competenze scientifiche e tecnologiche.
     </p>
     
+    <!-- Galleria Immagini Scuola (Tutto in minuscolo) -->
     <div class="gallery">
         <div><img src="scuola1.jpeg" alt="Scuola 1"></div>
         <div><img src="scuola2.jpeg" alt="Scuola 2"></div>
@@ -351,6 +352,7 @@
         Sintesi del percorso triennale di FSL focalizzato sulle discipline scientifico-tecnologiche (STEM) e sull'orientamento accademico, svolto in sinergia con università ed enti di rilievo del territorio:
     </p>
 
+    <!-- Tabella riassuntiva con eventi descritti in breve -->
     <table style="width: 100%; margin-top: 25px; border-collapse: collapse; background: rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; font-size: 0.95rem;">
         <thead>
             <tr style="background: rgba(255, 215, 0, 0.2); color: #ffd700; text-align: left;">
@@ -403,19 +405,103 @@
 
     <div class="materie-grid">
 
+        <!-- ARTE -->
         <div class="materia-box">
             <h4>🎨 Arte</h4>
             <div class="argomento-titolo-box">🏷️ Crypto Art e NFT</div>
             <p>Analisi della dematerializzazione dell'opera d'arte nel web. Essere cittadini digitali consapevoli significa tutelare il diritto d'autore e valorizzare la creatività digitale contro la pirateria online.</p>
         </div>
 
+        <!-- FILOSOFIA -->
         <div class="materia-box">
             <h4>🧭 Filosofia</h4>
             <div class="argomento-titolo-box">🏷️ L'Etica dell'Infosfera</div>
             <p>Studio del pensiero di Luciano Floridi. Una riflessione filosofica per sviluppare un pensiero critico utile a difendere la libertà di scelta e l'identità personale dagli algoritmi manipolatori dei social.</p>
         </div>
 
+        <!-- FISICA -->
         <div class="materia-box">
             <h4>⚛️ Fisica</h4>
             <div class="argomento-titolo-box">🏷️ Crittografia Quantistica</div>
-            <p>Studio di come le leggi della meccan
+            <p>Studio di come le leggi della meccanica quantistica e della fisica moderna proteggano la privacy e i dati sensibili globali dei cittadini, rendendo le comunicazioni digitali inviolabili.</p>
+        </div>
+
+        <!-- INGLESE -->
+        <div class="materia-box">
+            <h4>🇬🇧 Inglese</h4>
+            <div class="argomento-titolo-box">🏷️ Orwell's 1984 & Surveillance</div>
+            <p>Analysis of George Orwell's masterpiece, connecting the prophetic concept of 'Big Brother' to modern issues like digital mass surveillance, personal data collection, and privacy rights.</p>
+        </div>
+
+        <!-- ITALIANO -->
+        <div class="materia-box">
+            <h4>🇮🇹 Italiano</h4>
+            <div class="argomento-titolo-box">🏷️ Pirandello e le Maschere Social</div>
+            <p>Collegamento con "Uno, nessuno e centomila" di Pirandello. Analisi della frammentazione dell'io e delle "maschere virtuali" che creiamo sui social, promuovendo un'etica dell'autenticità digitale.</p>
+        </div>
+
+        <!-- MATEMATICA -->
+        <div class="materia-box">
+            <h4>📐 Matematica</h4>
+            <div class="argomento-titolo-box">🏷️ Studio di Funzioni e Big Data</div>
+            <p>Applicazione dello studio di funzioni e del calcolo differenziale agli algoritmi predittivi della rete. Capire la matematica permette di comprendere come i nostri dati vengano ottimizzati dai social.</p>
+        </div>
+
+        <!-- RELIGIONE -->
+        <div class="materia-box">
+            <h4>⛪ Religione</h4>
+            <div class="argomento-titolo-box">🏷️ Antropologia e Fraternità Virtuale</div>
+            <p>Riflessione sulla centralità della dignità umana nelle relazioni online. La tecnologia deve restare uno strumento al servizio dell'incontro, del dialogo inclusivo e della solidarietà digitale.</p>
+        </div>
+
+        <!-- INFORMATICA -->
+        <div class="materia-box">
+            <h4>💻 Informatica</h4>
+            <div class="argomento-titolo-box">🏷️ Cybersecurity e Diritti Digitali</div>
+            <p>Studio pratico della sicurezza informatica, dei protocolli di rete protetti e della Blockchain. Conoscere questi strumenti garantisce l'esercizio sicuro dei propri diritti e doveri sul web.</p>
+        </div>
+
+        <!-- MOTORIA -->
+        <div class="materia-box">
+            <h4>🏃‍♂️ Motoria</h4>
+            <div class="argomento-titolo-box">🏷️ Benessere e Nomofobia</div>
+            <p>Analisi dei rischi legati alla sedentarietà tecnologica e alle nuove patologie digitali (Nomofobia e Hikikomori), promuovendo l'importance del movimento e della cultura del "digital detox".</p>
+        </div>
+
+        <!-- SCIENZE NATURALI -->
+        <div class="materia-box">
+            <h4>🌿 Scienze Naturali</h4>
+            <div class="argomento-titolo-box">🏷️ Biotecnologie e Infodemia</div>
+            <p>Studio delle biotecnologie e della PCR applicato all'analisi delle fonti sul web. Il cittadino digitale usa il metodo scientifico per contrastare le fake news e la disinformazione scientifica.</p>
+        </div>
+
+        <!-- STORIA -->
+        <div class="materia-box">
+            <h4>📜 Storia</h4>
+            <div class="argomento-titolo-box">🏷️ Dalla Guerra Cold a Internet</div>
+            <p>Evoluzione della rete a partire dal progetto ARPANET durante la Guerra Fredda. Studio dei parallelismi tra la vecchia propaganda di regime e la moderna cyber-censura geopolitica.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Samuel Cirillo</p>
+</footer>
+
+<script>
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold:0.1 });
+
+    sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
