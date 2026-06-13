@@ -92,6 +92,11 @@
             scroll-margin-top: 100px; 
         }
 
+        /* Contenitore specifico per l'Educazione Civica per ospitare i riquadri più larghi */
+        section.civica-section {
+            max-width: 1100px;
+        }
+
         section.show{
             opacity:1;
             transform:translateY(0);
@@ -149,10 +154,10 @@
             margin-bottom: 0;
         }
 
-        /* Griglia per le 11 Materie */
+        /* Griglia Modificata: i quadratini ora occupano più spazio orizzontale */
         .materie-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
             margin-top: 25px;
         }
@@ -160,12 +165,12 @@
         .materia-box {
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 20px;
+            padding: 24px;
             border-radius: 15px;
             transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
 
         .materia-box:hover {
@@ -198,7 +203,7 @@
             font-size: 0.95rem;
             line-height: 1.6;
             color: #e2e8f0;
-            text-align: left;
+            text-align: justify;
         }
 
         section p,
@@ -275,6 +280,9 @@
                 padding: 25px;
                 scroll-margin-top: 20px; 
             }
+            .materie-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -295,6 +303,9 @@
 </nav>
 
 <header id="home">
+    <h3 style="font-size: 1.4rem; color: #ffd700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; max-width: 800px;">
+        Benvenuti nel mio spazio digitale: un percorso tra scienza, cultura e cittadinanza consapevole.
+    </h3>
     <h2>Samuel Cirillo</h2>
     <p>
         “La curiosità, la determinazione e la voglia di migliorarmi guidano ogni mio obiettivo.”
@@ -342,7 +353,7 @@
     <div class="grecia-insights">
         <h4>Spunti di riflessione</h4>
         
-        <p><strong>Identità e mito:</strong> Il contatto con la tragedia greca e i siti archeologici evoca quella profonda crisis d'identità e quel senso di frammentazione interiore dell'uomo moderno che abbiamo analizzato nella letteratura del primo Novecento italiano.</p>
+        <p><strong>Identità e mito:</strong> Il contatto con la tragedia greca e i siti archeologici evoca quella profonda crisi d'identità e quel senso di frammentazione interiore dell'uomo moderno che abbiamo analizzato nella letteratura del primo Novecento italiano.</p>
         
         <p><strong>Dall'osservazione clinica alle biotecnologie:</strong> Visitando i luoghi legati alla medicina classica, come l'Asclèpieion, emerge il passaggio fondamentale dal mito all'osservazione razionale della natura e del corpo umano. Questa prima forma di indagine scientifica trova la sua massima evoluzione odierna nelle biotecnologie avanzate studiate in questo quinto anno, dove la comprensione dei meccanismi biologici più profondi — attraverso l'ingegneria genetica e la tecnologia del DNA ricombinante — ci permette di diagnosticare e curare le patologie con precisione molecolare.</p>
     </div>
@@ -416,7 +427,7 @@
     </div>
 </section>
 
-<section id="civica">
+<section id="civica" class="civica-section">
     <h3>🏛️ Educazione Civica</h3>
     <span class="section-subtitle">🌐 Cittadinanza Digitale</span>
     <span class="sub-motto">“EDUCATI” PER AFFRONTARE LE SFIDE DI OGGI E CREARE UN FUTURO MIGLIORE</span>
@@ -427,7 +438,7 @@
         <div class="materia-box">
             <h4>🎨 Arte</h4>
             <div class="argomento-titolo-box">🏷️ Crypto Art e NFT</div>
-            <p>Il concetto tradizionale di opera d'arte si evolve radicalmente nel web attraverso la Crypto Art e la tecnologia degli NFT (Non-Fungible Token). Questa transizione verso il digitale rende necessario ridefinire il valore dell'autenticità e della proprietà intellettuale. Essere cittadini digitali consapevoli significa comprendere l'importanza di questi registri decentralizzati per tutelare il diritto d'autore, sostenere attivamente la creatività degli artisti indipendenti e combattere fenomeni dannosi come la pirateria online e il plagio sistematico all'interno della rete.</p>
+            <p>Il concetto tradizionale di opera d'arte si evolve radicalmente nel web attraverso la Crypto Art e la tecnologia degli NFT (Non-Fungible Token). Questa transizione verso il digitale rende necessario ridefinire il valore dell'autenticità e della proprietà intellettuale. Essere cittadini digitali consapevoli significa comprendere l'importance di questi registri decentralizzati per tutelare il diritto d'autore, sostenere attivamente la creatività degli artisti indipendenti e combattere fenomeni dannosi come la pirateria online e il plagio sistematico all'interno della rete.</p>
         </div>
 
         <!-- FILOSOFIA -->
@@ -462,7 +473,7 @@
         <div class="materia-box">
             <h4>📐 Matematica</h4>
             <div class="argomento-titolo-box">🏷️ Lo Studio dei Limiti</div>
-            <p>La matematica può essere collegata alla cittadinanza digitale attraverso lo studio dei limiti. Nel mondo digitale è importante considerare i limiti che non devono essere superati nell’utilizzo di Internet e dei social network. Ad esempio, la condivisione eccessiva di dati personali può mettere a rischio la propria privacy. Proprio come in matematica i limiti aiutano a comprendere fino a dove può arrivare una funzione, nella cittadinanza digitale aiutano a riflettere sui confini da respektare per utilizzare la tecnologia in modo sicuro, responsabile e consapevole.</p>
+            <p>La matematica può essere collegata alla cittadinanza digitale attraverso lo studio dei limiti. Nel mondo digitale è importante considerare i limiti che non devono essere superati nell’utilizzo di Internet e dei social network. Ad esempio, la condivisione eccessiva di dati personali può mettere a rischio la propria privacy. Proprio come in matematica i limiti aiutano a comprendere fino a dove può arrivare una funzione, nella cittadinanza digitale aiutano a riflettere sui confini da rispettare per utilizzare la tecnologia in modo sicuro, responsabile e consapevole.</p>
         </div>
 
         <!-- RELIGIONE -->
@@ -490,7 +501,7 @@
         <div class="materia-box">
             <h4>🌿 Scienze Naturali</h4>
             <div class="argomento-titolo-box">🏷️ Virus Biologici e Informatici</div>
-            <p>La cittadinanza digitale può essere collegata allo studio dei virus perché, così como i virus biologici si diffondono tra gli organismi, anche nel mondo digitale esistono virus informatici che si propagano tra dispositivi e reti. Questo collegamento evidenzia l’importanza della prevenzione e della sicurezza, sia per proteggere la salute sia per tutelare i propri dati e le proprie informazioni online.</p>
+            <p>La cittadinanza digitale può essere collegata allo studio dei virus perché, così come i virus biologici si diffondono tra gli organismi, anche nel mondo digitale esistono virus informatici che si propagano tra dispositivi e reti. Questo collegamento evidenzia l’importanza della prevenzione e della sicurezza, sia per proteggere la salute sia per tutelare i propri dati e le proprie informazioni online.</p>
         </div>
 
         <!-- STORIA -->
