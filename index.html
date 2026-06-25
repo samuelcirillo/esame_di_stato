@@ -126,6 +126,30 @@
             text-transform: uppercase;
         }
 
+        /* Stile specifico per il bottone del Capolavoro */
+        .pdf-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 14px 30px;
+            background: #ffd700;
+            color: #1d2671;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .pdf-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+            background: #fff;
+            color: #c33764;
+        }
+
         /* Griglia Modificata: i quadratini ora occupano più spazio orizzontale */
         .materie-grid {
             display: grid;
@@ -266,6 +290,7 @@
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#scuola">Scuola</a></li>
+        <li><a href="#capolavoro">Capolavoro</a></li>
         <li><a href="#attivita">Attività</a></li>
         <li><a href="#futuro">Futuro</a></li>
         <li><a href="#pcto">FSL</a></li>
@@ -296,6 +321,18 @@
     </div>
 </section>
 
+<section id="capolavoro">
+    <h3>🏆 Il mio Capolavoro</h3>
+    <p>
+        In questa sezione è possibile visionare il progetto "Capolavoro", un elaborato personale che racchiude le tappe fondamentali della mia crescita, delle mie competenze e delle esperienze più significative maturate nel corso del mio percorso scolastico e personale.
+    </p>
+    <div style="text-align: center;">
+        <a href="capolavoro.pdf" target="_blank" class="pdf-btn">
+            📄 Apri il file PDF "Capolavoro"
+        </a>
+    </div>
+</section>
+
 <section id="attivita">
     <h3>🧠 Attività ed experiences</h3>
     <ul>
@@ -305,7 +342,7 @@
         <li>⚽ Torneo di calcio</li>
     </ul>
 
-    <!-- Galleria Immagini Attività (pallavolo1.jpeg rimossa) -->
+    <!-- Galleria Immagini Attività -->
     <div class="gallery">
         <div><img src="pallavolo2.jpeg" alt="Pallavolo 2"></div>
         <div><img src="pallavolo3.jpeg" alt="Pallavolo 3"></div>
@@ -388,7 +425,7 @@
         <div class="materia-box">
             <h4>🎨 Arte</h4>
             <div class="argomento-titolo-box">🏷️ Crypto Art e NFT</div>
-            <p>Il concetto tradizionale di opera d'arte si evolve radicalmente nel web attraverso la Crypto Art e la tecnologia degli NFT (Non-Fungible Token). Questa transizione verso il digitale rende necessario ridefinire il valore dell'autenticità e della proprietà intellettuale. Essere cittadini digitali consapevoli significa comprendere l'importance di questi registri decentralizzati per tutelare il diritto d'autore, sostenere attivamente la creatività degli artisti indipendenti e combattere fenomeni dannosi come la pirateria online e il plagio sistematico all'interno della rete.</p>
+            <p>Il concetto tradizionale di opera d'arte si evolve radicalmente nel web attraverso la Crypto Art e la tecnologia degli NFT (Non-Fungible Token). Questa transizione verso il digitale rende necessario ridefinire il valore dell'autenticità e della proprietà intellettuale. Essere cittadini digitali consapevoli significa comprendere l'importanza di questi registri decentralizzati per tutelare il diritto d'autore, sostenere attivamente la creatività degli artisti indipendenti e combattere fenomeni dannosi come la pirateria online e il plagio sistematico all'interno della rete.</p>
         </div>
 
         <!-- FILOSOFIA -->
@@ -402,7 +439,7 @@
         <div class="materia-box">
             <h4>⚛️ Fisica</h4>
             <div class="argomento-titolo-box">🏷️ Crittografia Quantistica</div>
-            <p>La sicurezza delle infrastrutture digitali globali poggia in modo sempre più solido sui principi della fisica moderna. Lo studio della crittografia quantistica, basata sull'inviolabilità del principio di indeterminazione di Heisenberg, dimostra come le leggi fondamentali della natura possano essere applicate per proteggere i flussi informativi e i dati sensibili dei cittadini. Comprendere l'evoluzione dei sistemi crittografici permette di cogliere l'importance della cyber-security per garantire l'inviolabilità della privacy e la difesa delle libertà civili nel cyberspazio.</p>
+            <p>La sicurezza delle infrastrutture digitali globali poggia in modo sempre più solido sui principi della fisica moderna. Lo studio della crittografia quantistica, basata sull'inviolabilità del principio di indeterminazione di Heisenberg, dimostra come le leggi fondamentali della natura possano essere applicate per proteggere i flussi informativi e i dati sensibili dei cittadini. Comprendere l'evoluzione dei sistemi crittografici permette di cogliere l'importanza della cyber-security per garantire l'inviolabilità della privacy e la difesa delle libertà civili nel cyberspazio.</p>
         </div>
 
         <!-- INGLESE -->
@@ -423,7 +460,7 @@
         <div class="materia-box">
             <h4>📐 Matematica</h4>
             <div class="argomento-titolo-box">🏷️ Lo Studio dei Limiti</div>
-            <p>La matematica può essere collegata alla cittadinanza digitale attraverso lo studio dei limiti. Nel mondo digitale è importante considerare i limiti che non devono essere superati nell’utilizzo di Internet e dei social network. Ad esempio, la condivisione eccessiva di dati personali può mettere a rischio la propria privacy. Proprio come in matematica i limiti aiutano a comprendere fino a dove può arrivare una funzione, nella cittadinanza digitale aiutano a riflettere sui confini da rispettare per utilizzare la tecnologia in modo sicuro, responsabile e consapevole.</p>
+            <p>La matematica può essere collegata alla cittadinanza digitale attraverso lo studio dei limites. Nel mondo digitale è importante considerare i limiti che non devono essere superati nell’utilizzo di Internet e dei social network. Ad esempio, la condivisione eccessiva di dati personali può mettere a rischio la propria privacy. Proprio come in matematica i limiti aiutano a comprendere fino a dove può arrivare una funzione, nella cittadinanza digitale aiutano a riflettere sui confini da rispettare per utilizzare la tecnologia in modo sicuro, responsabile e consapevole.</p>
         </div>
 
         <!-- RELIGIONE -->
@@ -451,14 +488,14 @@
         <div class="materia-box">
             <h4>🌿 Scienze Naturali</h4>
             <div class="argomento-titolo-box">🏷️ Virus Biologici e Informatici</div>
-            <p>La cittadinanza digitale può essere collegata allo studio dei virus perché, così come i virus biologici si diffondono tra gli organismi, anche nel mondo digitale esistono virus informatici che si propagano tra dispositivi e reti. Questo collegamento evidenzia l’importance della prevenzione e della sicurezza, sia per proteggere la salute sia per tutelare i propri dati e le proprie informazioni online.</p>
+            <p>La cittadinanza digitale può essere collegata allo studio dei virus perché, così come i virus biologici si diffondono tra gli organismi, anche nel mondo digitale esistono virus informatici che si propagano tra dispositivi e reti. Questo collegamento evidenzia l’importanza della prevenzione e della sicurezza, sia per proteggere la salute sia per tutelare i propri dati e le proprie informazioni online.</p>
         </div>
 
         <!-- STORIA -->
         <div class="materia-box">
             <h4>📜 Storia</h4>
             <div class="argomento-titolo-box">🏷️ Totalitarismi e Manipolazione</div>
-            <p>La cittadinanza digitale si collega alla storia del Novecento, in particolare ai totalitarismi, che usavano la propaganda per controllare le informazioni. Oggi, nel mondo digitale, phenomena simili si ritrovano nelle fake news e nella manipolazione sui social. Per questo è importante sviluppare spirito critico e verificare le fonti per usare Internet in modo consapevole e responsabile.</p>
+            <p>La cittadinanza digitale si collega alla storia del Novecento, in particolare ai totalitarismi, che usavano la propaganda per controllare le informazioni. Oggi, nel mondo digitale, fenomeni simili si ritrovano nelle fake news e nella manipolazione sui social. Per questo è importante sviluppare spirito critico e verificare le fontes per usare Internet in modo consapevole e responsabile.</p>
         </div>
 
     </div>
